@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNews", "MyNews\MyNews.csproj", "{8393F250-D757-40AC-BE50-01851AF15656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNews.Admin", "MyNews.Admin\MyNews.Admin.csproj", "{B51BDB25-EEC9-4A3F-A970-B11B35989302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNews.Core", "MyNews.Core\MyNews.Core.csproj", "{FFE5ABC3-277C-44E7-A8B4-7628DECA9381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8393F250-D757-40AC-BE50-01851AF15656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8393F250-D757-40AC-BE50-01851AF15656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8393F250-D757-40AC-BE50-01851AF15656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8393F250-D757-40AC-BE50-01851AF15656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B51BDB25-EEC9-4A3F-A970-B11B35989302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51BDB25-EEC9-4A3F-A970-B11B35989302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51BDB25-EEC9-4A3F-A970-B11B35989302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51BDB25-EEC9-4A3F-A970-B11B35989302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE5ABC3-277C-44E7-A8B4-7628DECA9381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE5ABC3-277C-44E7-A8B4-7628DECA9381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE5ABC3-277C-44E7-A8B4-7628DECA9381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE5ABC3-277C-44E7-A8B4-7628DECA9381}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDF40033-F91E-44AB-ADDE-A51F9791C81B}
+	EndGlobalSection
+EndGlobal
