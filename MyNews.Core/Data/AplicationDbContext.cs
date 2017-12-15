@@ -22,5 +22,14 @@ namespace MyNews.Core.Data
 
         public DbSet<User> Users { get; set; } 
 
+        protected override void OnModelCreating (ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasAlternateKey(c => c.Email)
+                .HasName("AlternateKey_UserEmail");
+        }
+
+
+
     }
 }

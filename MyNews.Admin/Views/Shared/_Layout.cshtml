@@ -34,18 +34,22 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    @if (string.IsNullOrEmpty(Context.Session.GetString("UserName")))
+                    @if (!string.IsNullOrEmpty(Context.Session.GetString("UserName")))
                     {
-                        <li class="pull-right"> <a href="/Users/Create"> Hoşgeldiniz @Context.Session.GetString("UserName")</a></li>
-
+                        <li class="pull-right"> <a asp-action="EditProfile" asp-controller="Users"> Hoşgeldiniz @Context.Session.GetString("UserName")</a></li>
+                        <li> <a href="#" onclick="javascript:document.getElementById('logoutForm').submit();">Çıkış</a>
+                            <form id="logoutForm" asp-action="Logout" asp-controller="Users" method="post"></form>
+                    </li>
                     }
                     else
                     {
                         <li> <a asp-action="Login" asp-controller="Users">Giriş</a></li>
-                        <li> <a asp-action="Login" asp-controller="Users">Giriş</a></li>
+                        
 
                     }
                 </ul>
+                
+
             </div>
         </div>
     </nav>

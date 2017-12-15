@@ -42,6 +42,7 @@
         <hr />
         <footer>
             <p>&copy; 2017 - MyNews</p>
+            @await Component.InvokeAsync("FooterComponent", new { count = 3 })
         </footer>
     </div>
 

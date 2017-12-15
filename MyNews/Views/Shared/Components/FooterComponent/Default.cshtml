@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MyNews.Core.Models.News>
+@{
+    ViewData["Title"] = "Default";
+}
+
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Title</li>
+
+    }
+</ul>
+

@@ -1,0 +1,41 @@
+﻿
+@model IEnumerable<MyNews.Core.Models.News>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Kategoriler</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <ul>
+                @foreach (var category in (IEnumerable<CategoryViewModel>)ViewBag.Categories)
+                {
+
+                    <li><a  asp-action="Index" asp-route-id="@category.Id"> @category.Name (@category.Count)</a></li>
+
+                }
+            </ul>
+
+        </div>
+        <div class="col-md-8">
+            
+                
+                    @foreach (var item in Model)
+                    {
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">
+                                <h3><a asp-action="Details" asp-controller="News" asp-route-id="@item.Id"> @item.Title </a></h3>
+                            </div>
+                            <div class="panel panel-body">
+                                @Html.Raw(item.Description.Substring(0,(item.Description.Length<200?item.Description.Length:200))) 
+                                <span style="font-size:xx-small">Kategori:@item.Category.Name Tarih:@item.PublishDate.ToString("dd.MM.yyyy")</span>
+                                <img src="/uploads/@item.Photo" alt="@item.Title" class="img img-thumbnail pull-left" style="max-width:200px" />
+                            </div>
+                        </div>
+                    }
+
+
+
+
+                        
+        </div>
+    </div>

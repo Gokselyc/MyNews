@@ -23,6 +23,9 @@ namespace MyNews.Controllers
 
         public IActionResult Index()
         {
+            
+
+            ViewBag.spor = context.News.Include(n => n.Category).Where(n =>n.Category.Name=="Spor").Take(10).ToList();
             //var news=(from n in context.News orderby n.PublishDate descending select n); sorgu linqu
             var news = context.News.Include(i=>i.Category).Where(n => n.IsPublished == true).OrderByDescending(o => o.PublishDate).Take(10).ToList(); //n=>n ler Lambda,Take(10) sadece 10 tane kaydı getirir.
 

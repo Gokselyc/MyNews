@@ -90,7 +90,16 @@
     </div>
 </div>
 
+<div class="row">
+        <h2>Kategoriler</h2>
+        <ul>
+            @foreach (var item in ViewBag.spor)
+            {
+                <li>@item.Title</li>
+            }
+        </ul>
 
+    </div>
 
 
 <div class="row">
